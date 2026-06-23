@@ -1,0 +1,309 @@
+/* Conteneur principal des projets / Projects main container */
+.projects-container {
+  padding: 4rem 10%;
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* En-tête des projets / Projects header */
+.projects-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+/* Titre des projets / Projects title */
+.projects-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Sous-titre des projets / Projects subtitle */
+.projects-subtitle {
+  font-size: 1.2rem;
+  color: var(--text-muted);
+  font-family: "Space Mono", monospace;
+}
+
+/* Grille des projets / Projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 3rem;
+}
+
+/* Carte de projet / Project card */
+.project-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Effet au survol de la carte / Card hover effect */
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--accent-color);
+}
+
+/* Miniature du projet / Project thumbnail */
+.project-thumbnail {
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Conteneur de maquette / Mockup container */
+.mockup-container {
+  width: 60%;
+  height: 70%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(5px);
+  transition: transform 0.5s ease;
+}
+
+/* Effet au survol sur la miniature / Hover effect on thumbnail */
+.project-card:hover .mockup-container {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Form UI Abstract */
+.abstract-ui-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.aui-title {
+  height: 12px;
+  width: 40%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+.aui-input {
+  height: 20px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+.aui-button {
+  height: 24px;
+  width: 60%;
+  background: #4f46e5;
+  border-radius: 4px;
+  margin-top: auto;
+}
+
+/* Mobile UI Abstract */
+.abstract-ui-mobile {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  height: 100%;
+  width: 50% !important;
+  margin: 0 auto;
+  border-radius: 12px !important;
+}
+.aui-m-header {
+  height: 15px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.aui-m-chat {
+  height: 25px;
+  width: 70%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+.aui-m-chat.right {
+  align-self: flex-end;
+  background: #9333ea;
+}
+.aui-m-input {
+  height: 15px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-top: auto;
+}
+
+/* Game UI Abstract */
+.abstract-ui-game {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+}
+.aui-g-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: absolute;
+}
+.aui-g-circle.top {
+  top: 20%;
+  background: #ef4444;
+}
+.aui-g-circle.left {
+  bottom: 20%;
+  left: 20%;
+  background: #3b82f6;
+}
+.aui-g-circle.right {
+  bottom: 20%;
+  right: 20%;
+  background: #10b981;
+}
+
+/* Dashboard UI Abstract */
+.abstract-ui-dashboard {
+  display: flex;
+  height: 100%;
+  padding: 0.5rem;
+  gap: 0.5rem;
+}
+.aui-d-nav {
+  width: 20%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+.aui-d-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.aui-d-text {
+  height: 30%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.aui-d-img {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Landing UI Abstract */
+.abstract-ui-landing {
+  display: flex;
+  height: 100%;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+.aui-l-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.aui-l-title {
+  height: 20px;
+  width: 80%;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+.aui-l-p {
+  height: 10px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+.aui-l-right {
+  flex: 1;
+  height: 80%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+}
+
+/* Calculator UI Abstract */
+.abstract-ui-calc {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 60% !important;
+  margin: 0 auto;
+}
+.aui-c-screen {
+  height: 30px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 4px;
+}
+.aui-c-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem;
+  flex: 1;
+}
+.aui-c-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+}
+
+/* Informations du projet / Project information */
+.project-info {
+  padding: 1.5rem;
+}
+
+/* Titre de la carte de projet / Project card title */
+.project-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+}
+
+/* Action de la carte / Card action */
+.project-card-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+/* Animation de l'icône / Icon animation */
+.project-card-action svg {
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-card-action {
+  color: var(--accent-color);
+}
+
+.project-card:hover .project-card-action svg {
+  transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+  .projects-container {
+    padding: 2rem 5%;
+  }
+  .projects-title {
+    font-size: 2.5rem;
+  }
+}

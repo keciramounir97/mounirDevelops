@@ -1,0 +1,162 @@
+/* Conteneur principal de la page des clients / Main container for clients page */
+.clients-container {
+  padding: 4rem 10%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Panneau en verre pour encapsuler le contenu / Glass panel to wrap content */
+.clients-glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 4rem;
+  width: 100%;
+  max-width: 1200px;
+  box-shadow: var(--glass-shadow);
+}
+
+/* En-tête de la section clients / Clients header */
+.clients-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+/* Titre de la section clients / Clients title */
+.clients-title {
+  font-size: 3rem;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  color: var(--text-light);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+/* Sous-titre de la section clients / Clients subtitle */
+.clients-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grille des logos / Logos grid */
+.clients-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Enveloppe de logo / Logo wrapper */
+.client-logo-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  filter: grayscale(100%) opacity(0.7);
+  animation: fadeIn 0.5s ease backwards;
+}
+
+/* Effet de survol sur l'enveloppe du logo / Hover effect on logo wrapper */
+.client-logo-wrapper:hover {
+  filter: grayscale(0%) opacity(1);
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Texte de logo / Logo text */
+.logo-text {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+/* Flexbox pour logo avec icône / Flexbox for icon logo */
+.logo-flex {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Boîte d'icône pour logo / Icon box for logo */
+.logo-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-family: "Inter", sans-serif;
+}
+
+/* Texte de logo en boîte / Box logo text */
+.logo-box-text {
+  padding: 0.5rem 1rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 4px;
+  font-family: "Outfit", sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Pied de page de la section (avis) / Section footer (reviews) */
+.clients-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--glass-border);
+}
+
+/* Conteneur des étoiles / Stars container */
+.stars-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Lien des avis / Reviews link */
+.reviews-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Effet au survol du lien d'avis / Reviews link hover effect */
+.reviews-link:hover {
+  color: #fbbf24; /* Couleur or / Gold color */
+}
+
+/* Responsivité / Responsiveness */
+@media (max-width: 768px) {
+  .clients-container {
+    padding: 2rem 5%;
+  }
+  .clients-glass-panel {
+    padding: 2rem;
+  }
+  .clients-title {
+    font-size: 2.2rem;
+  }
+}

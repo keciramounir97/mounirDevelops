@@ -1,0 +1,104 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border-bottom: 1px solid var(--glass-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
+  transition: transform 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.links {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--text-muted-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  &:hover {
+    color: var(--text-light);
+  }
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--accent-gradient);
+  /* Change to your brand color */
+  /* Smooth transition */
+  transition: width 0.3s ease-out;
+  border-radius: 2px;
+}
+
+/* On hover, scale the line back to full width (1) */
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.contact {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.icon-btn {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+  cursor: pointer;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: var(--glow-shadow);
+  }
+}
+
+@media screen and (max-widt: 900px) {
+  .nav-container {
+    padding: 1rem 2rem;
+  }
+  .links {
+    display: none;
+  }
+}

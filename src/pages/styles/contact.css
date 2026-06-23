@@ -1,0 +1,197 @@
+/* Enveloppe de la page de contact / Contact page wrapper */
+.contact-page-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 10%;
+  min-height: 100vh;
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Conteneur du formulaire principal / Main form container */
+.contact-container {
+  flex: 1;
+  max-width: 700px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 3rem;
+  box-shadow: var(--glass-shadow);
+  height: fit-content;
+}
+
+/* En-tête du contact / Contact header */
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Titre du contact / Contact title */
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  font-family: "Outfit", sans-serif;
+  color: var(--text-light);
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+/* Séparateur / Divider */
+.contact-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--accent-color);
+}
+
+.contact-divider span {
+  height: 2px;
+  width: 60px;
+  background: var(--accent-gradient);
+  border-radius: 2px;
+}
+
+/* Formulaire de contact / Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Groupe de champ / Form group */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Étiquettes / Labels */
+.form-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+}
+
+.required {
+  color: #ef4444;
+}
+
+/* Champs de saisie / Inputs and Textarea */
+.form-group input,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem;
+  color: var(--text-light);
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Focus sur les champs de saisie / Input focus */
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Bouton de soumission / Submit button */
+.submit-btn {
+  background: var(--accent-gradient);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  font-family: "Inter", sans-serif;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
+}
+
+/* Survol du bouton de soumission / Submit button hover */
+.submit-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--glow-shadow);
+}
+
+/* Section des informations / Info section */
+.contact-info-section {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* Bloc d'information / Info block */
+.info-block h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  font-family: "Outfit", sans-serif;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.info-block p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  font-family: "Inter", sans-serif;
+}
+
+/* Liens sociaux / Social links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-circle {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.social-circle:hover {
+  background: var(--accent-color);
+  border-color: var(--accent-color);
+  transform: translateY(-5px);
+  box-shadow: var(--glow-shadow);
+}
+
+/* Responsivité / Responsiveness */
+@media (max-width: 1024px) {
+  .contact-page-wrapper {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 5%;
+  }
+  .contact-info-section {
+    width: 100%;
+    max-width: 700px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .info-block {
+    flex: 1;
+    min-width: 250px;
+  }
+}

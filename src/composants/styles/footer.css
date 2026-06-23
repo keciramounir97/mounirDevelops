@@ -1,0 +1,15 @@
+.footer-container {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border-top: 1px solid var(--glass-border);
+  margin-top: auto;
+}
+
+.footer-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.5px;
+}
